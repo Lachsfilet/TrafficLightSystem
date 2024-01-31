@@ -27,10 +27,12 @@ async function generateTraffic() {
 // Start traffic generation loop
 setInterval(generateTraffic, 1); // Adjust the interval as needed
 
+const PORT = process.env.PORT || 3000; // Default to port 3000 if PORT environment variable is not set
+
 app.get('/', (request, response) => {
     response.json({ lane1, lane2 });
 });
 
-app.listen(80, () => {
-    console.log(`Server is listening on port 3000`);
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
 });
