@@ -27,10 +27,10 @@ async function generateTraffic() {
 // Start traffic generation loop
 setInterval(generateTraffic, 1); // Adjust the interval as needed
 
-app.get('/traffic-status', (request, response) => {
+app.get('/', (request, response) => {
     response.json({ lane1, lane2 });
 });
 
-app.listen(3000, () => {
+app.listen(80, () => {
     console.log(`Server is listening on port 3000`);
 });
