@@ -11,19 +11,16 @@ function sleep(ms) {
 async function generateTraffic() {
     if (lane1 == 0 && lane2 == 0) {
         lane1 = 1;
-        console.log(`Lane1: ${lane1}, Lane2: ${lane2}`)
     }
     if (lane1 == 1) {
         await sleep(15000);
         lane1 = 0;
         lane2 = 1;
-        console.log(`Lane1: ${lane1}, Lane2: ${lane2}`)
     }
     if (lane2 == 1) {
         await sleep(15000);
         lane1 = 1;
         lane2 = 0;
-        console.log(`Lane1: ${lane1}, Lane2: ${lane2}`)
     }
 }
 
